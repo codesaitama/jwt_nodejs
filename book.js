@@ -62,3 +62,7 @@ const authenticateJWT = (req, res, next) => {
         res.sendStatus(401);
     }
 };
+
+app.get('/books', authenticateJWT, (req, res) => {
+    res.json(books);
+});
