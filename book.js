@@ -37,3 +37,7 @@ const books = [
         "year": 1315
     },
 ];
+
+app.get('/books', (req, res) => {
+    res.json(books);
+});
